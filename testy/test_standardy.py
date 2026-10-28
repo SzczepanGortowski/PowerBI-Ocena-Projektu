@@ -201,5 +201,13 @@ class TestReguly(unittest.TestCase):
             self.assertTrue(r.dlaczego and r.jak and r.zrodlo, r.id)
 
 
+class TestDokumentacja(unittest.TestCase):
+    def test_katalog_regul_aktualny(self):
+        sys.path.insert(0, str(Path(__file__).resolve().parent.parent / "docs"))
+        import generuj_reguly
+        self.assertEqual(generuj_reguly.PLIK.read_text(encoding="utf-8"), generuj_reguly.tresc(),
+                         "docs/reguly.md nie zgadza się z regułami — uruchom: python docs/generuj_reguly.py")
+
+
 if __name__ == "__main__":
     unittest.main()
