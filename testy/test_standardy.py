@@ -1,6 +1,6 @@
 """Testy silnika Standardów wizualizacji: syntetyczny raport PBIR z celowymi naruszeniami + czysta strona.
 
-Uruchom: .venv\\Scripts\\python.exe -m unittest discover -s narzedzia\\standardy-wizualizacji\\testy -v
+Uruchom (z folderu narzędzia): python -m unittest discover -s testy -v
 """
 import json
 import sys

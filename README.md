@@ -119,7 +119,9 @@ natywne.cs                  P/Invoke (DPI, właściciel okna, przeciąganie), ok
 analiza.ps1                 plik raportu (bridge / linia poleceń / ostatnie pliki), definicja modelu przez TOM, silnik
 wspolne.ps1                 wspólne funkcje (instancja Desktopa, bridge, Python)
 instaluj.ps1                rejestracja przycisku
-app/                        interfejs panelu (HTML/CSS/JS, ikony)
+ikona.png                   ikona przycisku na wstążce i okna panelu
+konfiguracja.json           progi reguł
+app/                        interfejs panelu (HTML/CSS/JS, ikony w app/ikony)
 standardy.py                punkt wejścia silnika (Python, biblioteka standardowa)
 standardy_wiz/
   katalog.py                standardy, profile, rejestr reguł (@regula), ocena
@@ -130,6 +132,7 @@ standardy_wiz/
   pbi/                      odczyt raportu (PBIR, PBIR-legacy, .pbix), modelu (TMSL) i kaskady formatowania
 przyklad/Demo.Report        syntetyczny raport demonstracyjny (strona „Przed” z naruszeniami, „Po” — czysta)
 testy/test_standardy.py     testy reguł, wyboru standardów i kolorymetrii
+docs/                       zrzuty panelu do README
 ```
 
 Panel i okno-gospodarz rozmawiają przez WebView2 (`PostWebMessageAsJson` / `chrome.webview.postMessage`). Silnik
