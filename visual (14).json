@@ -1,0 +1,70 @@
+{
+  "name": "zaKanwa",
+  "position": {
+    "x": 50,
+    "y": 900,
+    "z": 0,
+    "width": 200,
+    "height": 50,
+    "tabOrder": 0
+  },
+  "visual": {
+    "visualType": "cardVisual",
+    "query": {
+      "queryState": {
+        "Data": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "M"
+                    }
+                  },
+                  "Property": "Sprzedaż"
+                }
+              },
+              "queryRef": "M.Sprzedaż"
+            }
+          ]
+        }
+      }
+    },
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Tytuł zaKanwa'"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "general": [
+        {
+          "properties": {
+            "altText": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Opis zaKanwa'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    }
+  }
+}

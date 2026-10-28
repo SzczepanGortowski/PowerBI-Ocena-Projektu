@@ -1,0 +1,35 @@
+{
+  "name": "szaryTekst",
+  "position": {
+    "x": 20,
+    "y": 240,
+    "z": 0,
+    "width": 300,
+    "height": 40,
+    "tabOrder": 0
+  },
+  "visual": {
+    "visualType": "textbox",
+    "objects": {
+      "general": [
+        {
+          "properties": {
+            "paragraphs": [
+              {
+                "textRuns": [
+                  {
+                    "value": "Tekst",
+                    "textStyle": {
+                      "fontSize": "8pt",
+                      "color": "#bfbfbf"
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    }
+  }
+}

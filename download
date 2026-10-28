@@ -1,0 +1,6 @@
+__pycache__/
+*.pyc
+.venv/
+node_modules/
+# generowany przez instaluj.ps1 -TylkoPlik, zawiera ścieżkę z tej maszyny
+*.pbitool.json

@@ -1,0 +1,10 @@
+{
+  "name": "standardy-wizualizacji",
+  "version": "1.0.0",
+  "private": true,
+  "license": "MIT",
+  "description": "Power BI Desktop external tool: report check against selectable visualization standards (WCAG, Cleveland–McGill, IBCS, Tufte, Few, Gestalt, consistency, Microsoft guidance)",
+  "devDependencies": {
+    "@microsoft/powerbi-desktop-bridge-cli": "^0.1.2"
+  }
+}

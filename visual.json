@@ -1,0 +1,87 @@
+{
+  "name": "dol",
+  "position": {
+    "x": 40,
+    "y": 356,
+    "z": 0,
+    "width": 1200,
+    "height": 324,
+    "tabOrder": 2
+  },
+  "visual": {
+    "visualType": "lineChart",
+    "query": {
+      "queryState": {
+        "Category": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Kalendarz"
+                    }
+                  },
+                  "Property": "Data"
+                }
+              },
+              "queryRef": "Kalendarz.Data"
+            }
+          ]
+        },
+        "Y": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "M"
+                    }
+                  },
+                  "Property": "Sprzedaż"
+                }
+              },
+              "queryRef": "M.Sprzedaż"
+            }
+          ]
+        }
+      }
+    },
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Tytuł dol'"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "general": [
+        {
+          "properties": {
+            "altText": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Opis dol'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    }
+  }
+}

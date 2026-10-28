@@ -1,0 +1,87 @@
+{
+  "name": "liniaRegiony",
+  "position": {
+    "x": 980,
+    "y": 20,
+    "z": 0,
+    "width": 280,
+    "height": 200,
+    "tabOrder": 0
+  },
+  "visual": {
+    "visualType": "lineChart",
+    "query": {
+      "queryState": {
+        "Category": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Sklep"
+                    }
+                  },
+                  "Property": "Region"
+                }
+              },
+              "queryRef": "Sklep.Region"
+            }
+          ]
+        },
+        "Y": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "M"
+                    }
+                  },
+                  "Property": "Sprzedaż"
+                }
+              },
+              "queryRef": "M.Sprzedaż"
+            }
+          ]
+        }
+      }
+    },
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Tytuł liniaRegiony'"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "general": [
+        {
+          "properties": {
+            "altText": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Opis liniaRegiony'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="pl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Standardy wizualizacji</title>
+<link rel="stylesheet" href="app.css">
+</head>
+<body class="laduje">
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="ik-standardy" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M3 20.5h18M6 20.5v-6M10.5 20.5v-10M15 20.5v-4"/>
+    <circle cx="18" cy="6.5" r="4"/><path d="M16.2 6.6l1.3 1.3 2.4-2.6"/>
+  </symbol>
+</svg>
+
+<div class="pasek-zwiniety" id="pasek-zwiniety" title="Rozwiń panel standardów">
+  <svg class="ikona-duza"><use href="#ik-standardy"/></svg>
+  <div class="mini-ocena" id="mini-ocena">—</div>
+  <div class="mini-licz" id="mini-licz"></div>
+  <span class="ikona" data-ikona="ic_chevron_left"></span>
+</div>
+
+<div class="panel" id="panel">
+  <header class="naglowek" id="naglowek">
+    <div class="marka">
+      <svg class="ikona-duza"><use href="#ik-standardy"/></svg>
+      <span class="nazwa-narzedzia">Standardy wizualizacji</span>
+    </div>
+    <div class="przyciski">
+      <button class="ik" id="b-ponownie" title="Sprawdź ponownie (F5)"><span data-ikona="ic_refresh"></span></button>
+      <button class="ik" id="b-szerzej" title="Szerzej / węziej"><span class="obrot" data-ikona="ic_double_chevrons_vertical"></span></button>
+      <button class="ik" id="b-zwin" title="Zwiń do paska"><span data-ikona="ic_chevron_right"></span></button>
+      <button class="ik" id="b-przypnij" title="Odepnij od Power BI"><span data-ikona="ic_locked"></span></button>
+      <button class="ik" id="b-zamknij" title="Zamknij"><span data-ikona="ic_cross"></span></button>
+    </div>
+  </header>
+
+  <section class="raport">
+    <h1 id="r-nazwa">Sprawdzam otwarty raport…</h1>
+    <p id="r-meta"></p>
+  </section>
+
+  <main class="tresc" id="tresc">
+    <section class="postep" id="postep" hidden>
+      <div class="pasek-postepu"><i id="postep-pasek"></i></div>
+      <ol class="kroki" id="kroki"></ol>
+    </section>
+
+    <section class="blad-ogolny" id="blad" hidden></section>
+    <section id="banery"></section>
+
+    <section class="wynik" id="wynik" hidden>
+      <div class="karta oceny">
+        <div class="pierscien" id="pierscien"></div>
+        <div class="kategorie" id="kategorie"></div>
+      </div>
+
+      <nav class="zakladki" id="zakladki">
+        <button data-z="problemy" class="aktywna">Problemy <b id="z-problemy"></b></button>
+        <button data-z="strony">Strony <b id="z-strony"></b></button>
+        <button data-z="standardy">Standardy <b id="z-standardy"></b></button>
+      </nav>
+
+      <div class="widok" id="w-problemy">
+        <div class="filtry">
+          <div class="chipy" id="chipy-wagi"></div>
+          <div class="chipy" id="chipy-std"></div>
+          <label class="szukaj"><span data-ikona="ic_search"></span><input id="szukaj" type="search" placeholder="Szukaj: strona, wizualizacja, reguła…"></label>
+        </div>
+        <div id="lista-problemow"></div>
+      </div>
+      <div class="widok" id="w-strony" hidden></div>
+      <div class="widok" id="w-standardy" hidden>
+        <p class="wskazowka">Zaznacz standardy, które chcesz sprawdzać; rozwiń standard, żeby wyłączyć pojedyncze reguły. Wybór działa od razu i jest zapamiętywany.</p>
+        <div class="chipy profile" id="profile"></div>
+        <div id="lista-standardow"></div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="stopka" id="stopka">
+    <button class="glowny" id="b-kopiuj" title="Lista problemów z instrukcją naprawy (Markdown) — np. do wklejenia w asystenta AI"><span data-ikona="ic_copy"></span>Kopiuj listę zadań</button>
+    <button id="b-folder" title="Folder z wynikami (wynik.json, zadania.md)"><span data-ikona="ic_files"></span></button>
+  </footer>
+</div>
+<div class="toast" id="toast" hidden></div>
+<script src="app.js"></script>
+</body>
+</html>

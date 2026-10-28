@@ -1,0 +1,11 @@
+{
+  "$opis": "Progi reguł Standardów wizualizacji. Wybór standardów i wyłączanie reguł robi się w panelu (zakładka Standardy) albo opcjami --standardy / --profil / --wylaczone.",
+  "progi": {
+    "tekst_min_pt": 9,
+    "wizualizacje_max": 8,
+    "wizualizacje_blad": 12,
+    "wizualizacje_wydajnosc": 15,
+    "tolerancja_px": 2.0,
+    "pozycja_tolerancja_px": 4
+  }
+}

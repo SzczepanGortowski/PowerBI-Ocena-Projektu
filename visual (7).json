@@ -1,0 +1,87 @@
+{
+  "name": "kolo",
+  "position": {
+    "x": 20,
+    "y": 20,
+    "z": 0,
+    "width": 300,
+    "height": 200,
+    "tabOrder": 0
+  },
+  "visual": {
+    "visualType": "pieChart",
+    "query": {
+      "queryState": {
+        "Category": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Produkt"
+                    }
+                  },
+                  "Property": "Kategoria"
+                }
+              },
+              "queryRef": "Produkt.Kategoria"
+            }
+          ]
+        },
+        "Y": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "M"
+                    }
+                  },
+                  "Property": "Sprzedaż"
+                }
+              },
+              "queryRef": "M.Sprzedaż"
+            }
+          ]
+        }
+      }
+    },
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Tytuł kolo'"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "general": [
+        {
+          "properties": {
+            "altText": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Opis kolo'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    }
+  }
+}
